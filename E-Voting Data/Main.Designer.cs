@@ -33,21 +33,21 @@
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.collegesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schoolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.collegesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.classesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.schoolsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.collegesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentsToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quickHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
@@ -82,13 +82,13 @@
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.profileToolStripMenuItem.Text = "Profile";
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // collegesToolStripMenuItem
@@ -103,41 +103,6 @@
             this.collegesToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.collegesToolStripMenuItem.Text = "View";
             this.collegesToolStripMenuItem.Click += new System.EventHandler(this.collegesToolStripMenuItem_Click);
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentsToolStripMenuItem1,
-            this.classesToolStripMenuItem1,
-            this.schoolsToolStripMenuItem1,
-            this.collegesToolStripMenuItem2,
-            this.usersToolStripMenuItem1});
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.addToolStripMenuItem.Text = "Add";
-            // 
-            // importToolStripMenuItem
-            // 
-            this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentsToolStripMenuItem2});
-            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.importToolStripMenuItem.Text = "Import";
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem,
-            this.quickHelpToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
             // 
             // studentsToolStripMenuItem
             // 
@@ -163,6 +128,24 @@
             this.collegesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.collegesToolStripMenuItem1.Text = "Colleges";
             // 
+            // usersToolStripMenuItem
+            // 
+            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usersToolStripMenuItem.Text = "Users";
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.studentsToolStripMenuItem1,
+            this.classesToolStripMenuItem1,
+            this.schoolsToolStripMenuItem1,
+            this.collegesToolStripMenuItem2,
+            this.usersToolStripMenuItem1});
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.addToolStripMenuItem.Text = "Add";
+            // 
             // studentsToolStripMenuItem1
             // 
             this.studentsToolStripMenuItem1.Name = "studentsToolStripMenuItem1";
@@ -186,12 +169,7 @@
             this.collegesToolStripMenuItem2.Name = "collegesToolStripMenuItem2";
             this.collegesToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.collegesToolStripMenuItem2.Text = "Colleges";
-            // 
-            // usersToolStripMenuItem
-            // 
-            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.usersToolStripMenuItem.Text = "Users";
+            this.collegesToolStripMenuItem2.Click += new System.EventHandler(this.collegesToolStripMenuItem2_Click);
             // 
             // usersToolStripMenuItem1
             // 
@@ -199,22 +177,45 @@
             this.usersToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.usersToolStripMenuItem1.Text = "Users";
             // 
+            // importToolStripMenuItem
+            // 
+            this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.studentsToolStripMenuItem2});
+            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.importToolStripMenuItem.Text = "Import";
+            // 
             // studentsToolStripMenuItem2
             // 
             this.studentsToolStripMenuItem2.Name = "studentsToolStripMenuItem2";
-            this.studentsToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.studentsToolStripMenuItem2.Size = new System.Drawing.Size(120, 22);
             this.studentsToolStripMenuItem2.Text = "Students";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
+            this.quickHelpToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // quickHelpToolStripMenuItem
             // 
             this.quickHelpToolStripMenuItem.Name = "quickHelpToolStripMenuItem";
-            this.quickHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quickHelpToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.quickHelpToolStripMenuItem.Text = "Quick Help";
             // 
             // Main

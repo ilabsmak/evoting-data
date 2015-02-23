@@ -36,5 +36,11 @@ namespace E_Voting_Data
         {
 
         }
+
+        private void collegesToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            AddCollege addcollege = new AddCollege();
+            addcollege.Show();
+        }
     }
 }
