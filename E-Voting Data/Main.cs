@@ -42,5 +42,29 @@ namespace E_Voting_Data
             AddCollege addcollege = new AddCollege();
             addcollege.Show();
         }
+
+        private void schoolsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AddSchool addschool = new AddSchool();
+            addschool.Show();
+        }
+
+        private void usersToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AddUser adduser = new AddUser();
+            adduser.Show();
+        }
+
+        private void classesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AddClass addclass = new AddClass();
+            addclass.Show();
+        }
+
+        private void studentsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AddStudent addstudent = new AddStudent();
+            addstudent.Show();
+        }
     }
 }

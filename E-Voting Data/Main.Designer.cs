@@ -107,31 +107,31 @@
             // studentsToolStripMenuItem
             // 
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.studentsToolStripMenuItem.Text = "Students";
             // 
             // classesToolStripMenuItem
             // 
             this.classesToolStripMenuItem.Name = "classesToolStripMenuItem";
-            this.classesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.classesToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.classesToolStripMenuItem.Text = "Classes";
             // 
             // schoolsToolStripMenuItem
             // 
             this.schoolsToolStripMenuItem.Name = "schoolsToolStripMenuItem";
-            this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.schoolsToolStripMenuItem.Text = "Schools";
             // 
             // collegesToolStripMenuItem1
             // 
             this.collegesToolStripMenuItem1.Name = "collegesToolStripMenuItem1";
-            this.collegesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.collegesToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.collegesToolStripMenuItem1.Text = "Colleges";
             // 
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.usersToolStripMenuItem.Text = "Users";
             // 
             // addToolStripMenuItem
@@ -151,18 +151,21 @@
             this.studentsToolStripMenuItem1.Name = "studentsToolStripMenuItem1";
             this.studentsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.studentsToolStripMenuItem1.Text = "Students";
+            this.studentsToolStripMenuItem1.Click += new System.EventHandler(this.studentsToolStripMenuItem1_Click);
             // 
             // classesToolStripMenuItem1
             // 
             this.classesToolStripMenuItem1.Name = "classesToolStripMenuItem1";
             this.classesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.classesToolStripMenuItem1.Text = "Classes";
+            this.classesToolStripMenuItem1.Click += new System.EventHandler(this.classesToolStripMenuItem1_Click);
             // 
             // schoolsToolStripMenuItem1
             // 
             this.schoolsToolStripMenuItem1.Name = "schoolsToolStripMenuItem1";
             this.schoolsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.schoolsToolStripMenuItem1.Text = "Schools";
+            this.schoolsToolStripMenuItem1.Click += new System.EventHandler(this.schoolsToolStripMenuItem1_Click);
             // 
             // collegesToolStripMenuItem2
             // 
@@ -176,6 +179,7 @@
             this.usersToolStripMenuItem1.Name = "usersToolStripMenuItem1";
             this.usersToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.usersToolStripMenuItem1.Text = "Users";
+            this.usersToolStripMenuItem1.Click += new System.EventHandler(this.usersToolStripMenuItem1_Click);
             // 
             // importToolStripMenuItem
             // 
@@ -227,7 +231,7 @@
             this.MainMenuStrip = this.mainMenu;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
             this.mainMenu.ResumeLayout(false);
