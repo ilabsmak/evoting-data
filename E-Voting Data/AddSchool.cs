@@ -86,6 +86,11 @@ namespace E_Voting_Data
           
         }
 
+        private void AddSchool_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
         }
     

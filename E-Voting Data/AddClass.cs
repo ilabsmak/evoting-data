@@ -40,7 +40,7 @@ namespace E_Voting_Data
 
                 //This is my insert query in which i am taking input from the user through windows forms
 
-                string Query = "insert into sample.schools(name,code,school) values('" + this.txtname.Text + "','" + this.txtcode.Text + "', '" + (this.comboBox1.SelectedIndex+1) + "');";
+                string Query = "insert into sample.classes(name,code,school) values('" + this.txtname.Text + "','" + this.txtcode.Text + "', '" + (this.comboBox1.SelectedIndex+1) + "');";
 
                 //This is  MySqlConnection here i have created the object and pass my connection string.
 

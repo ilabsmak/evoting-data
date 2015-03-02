@@ -35,18 +35,38 @@ namespace E_Voting_Data
             
         }
 
-        public MySqlDataAdapter get_schools()
+        public MySqlDataAdapter get_schools(int college=0)
         {
-            MySqlCommand SelectCommand = new MySqlCommand("select * from sample.schools ;", myConn);
-            MySqlDataAdapter schoolAdapter = new MySqlDataAdapter(SelectCommand);
-            return schoolAdapter;
+            if (college == 0)
+            {
+                MySqlCommand SelectCommand = new MySqlCommand("select * from sample.schools ;", myConn);
+                MySqlDataAdapter schoolAdapter = new MySqlDataAdapter(SelectCommand);
+                return schoolAdapter;
+            }
+            else
+            {
+                MySqlCommand SelectCommand = new MySqlCommand("select * from sample.schools where college="+college+";", myConn);
+                MySqlDataAdapter schoolAdapter = new MySqlDataAdapter(SelectCommand);
+                return schoolAdapter;
+            }
+            
         }
 
-        public MySqlDataAdapter get_classes()
+        public MySqlDataAdapter get_classes(int school=0)
         {
-            MySqlCommand SelectCommand = new MySqlCommand("select * from sample.classes ;", myConn);
-            MySqlDataAdapter classAdapter = new MySqlDataAdapter(SelectCommand);
-            return classAdapter;
+            if (school == 0)
+            {
+                MySqlCommand SelectCommand = new MySqlCommand("select * from sample.classes ;", myConn);
+                MySqlDataAdapter classAdapter = new MySqlDataAdapter(SelectCommand);
+                return classAdapter;
+            }
+            else 
+            {
+                MySqlCommand SelectCommand = new MySqlCommand("select * from sample.classes where school="+school+" ;", myConn);
+                MySqlDataAdapter classAdapter = new MySqlDataAdapter(SelectCommand);
+                return classAdapter;
+            }
+            
         }
 
         public MySqlDataAdapter get_students()
