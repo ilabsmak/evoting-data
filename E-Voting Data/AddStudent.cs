@@ -40,7 +40,7 @@ namespace E_Voting_Data
 
                 //This is my insert query in which i am taking input from the user through windows forms
 
-                string Query = "insert into sample.students(fname,lname,othernames,stdno,regno,idno,class) values('" + this.txtfname.Text + "','" + this.txtlname.Text + "', '" + this.txtothername.Text + "','" + this.txtstdno.Text + "','" + this.txtregno.Text + "','" + this.txtid.Text + "','" + this.comboBox1.Text + "');";
+                string Query = "insert into sample.students(fname,lname,othernames,stdno,regno,idno,class) values('" + this.txtfname.Text + "','" + this.txtlname.Text + "', '" + this.txtothername.Text + "','" + this.txtstdno.Text + "','" + this.txtregno.Text + "','" + this.txtid.Text + "','" + (this.comboBox1.SelectedIndex+1) + "');";
 
                 //This is  MySqlConnection here i have created the object and pass my connection string.
 
@@ -73,6 +73,11 @@ namespace E_Voting_Data
                 MessageBox.Show(ex.Message);
 
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

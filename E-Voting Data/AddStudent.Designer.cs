@@ -167,6 +167,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(146, 21);
             this.comboBox1.TabIndex = 16;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // AddStudent
             // 
@@ -189,6 +190,7 @@
             this.Controls.Add(this.txtlname);
             this.Controls.Add(this.txtfname);
             this.Name = "AddStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddStudent";
             this.ResumeLayout(false);
             this.PerformLayout();

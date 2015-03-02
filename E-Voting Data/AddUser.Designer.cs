@@ -108,6 +108,7 @@
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.btnAdd);
             this.Name = "AddUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddUser";
             this.ResumeLayout(false);
             this.PerformLayout();
