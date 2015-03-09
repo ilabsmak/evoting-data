@@ -33,8 +33,34 @@ namespace E_Voting_Data
                 collegeFilter.Items.Add(new ComboboxValue(Int32.Parse(row[0].ToString()), row[1].ToString()));
 
             }
+
+            mainMenu.Renderer = new MyRenderer();
+            mainMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#266050");
             
         }
+
+        private class MyRenderer : ToolStripProfessionalRenderer
+        {
+            public MyRenderer() : base(new MyColors()) { }
+        }
+
+        private class MyColors : ProfessionalColorTable
+        {
+            public override Color MenuItemSelected
+            {
+                get { return System.Drawing.ColorTranslator.FromHtml("#10bd8f"); }
+            }
+
+            public override Color MenuItemSelectedGradientBegin
+            {
+                get { return System.Drawing.ColorTranslator.FromHtml("#10bd8f"); }
+            }
+            public override Color MenuItemSelectedGradientEnd
+            {
+                get { return System.Drawing.ColorTranslator.FromHtml("#10bd8f"); }
+            }
+        }
+
 
         private void Main_Load(object sender, EventArgs e)
         {
@@ -190,6 +216,11 @@ namespace E_Voting_Data
             {
                 classFilter.Items.Add(new ComboboxValue(Int32.Parse(row[0].ToString()), row[1].ToString()));
             }
+        }
+
+        private void mainMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
