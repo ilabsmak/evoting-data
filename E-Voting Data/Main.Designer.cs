@@ -85,21 +85,26 @@
             this.userToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.profileToolStripMenuItem,
             this.logoutToolStripMenuItem});
+            this.userToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
             this.userToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.userToolStripMenuItem.Text = "Main";
             this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
+            this.userToolStripMenuItem.MouseLeave += new System.EventHandler(this.userToolStripMenuItem_MouseLeave);
+            this.userToolStripMenuItem.MouseHover += new System.EventHandler(this.userToolStripMenuItem_MouseHover);
             // 
             // profileToolStripMenuItem
             // 
+            this.profileToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("profileToolStripMenuItem.Image")));
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.profileToolStripMenuItem.Text = "Profile";
             // 
             // logoutToolStripMenuItem
             // 
+            this.logoutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logoutToolStripMenuItem.Image")));
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // collegesToolStripMenuItem
@@ -110,43 +115,49 @@
             this.schoolsToolStripMenuItem,
             this.collegesToolStripMenuItem1,
             this.usersToolStripMenuItem});
+            this.collegesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.collegesToolStripMenuItem.Name = "collegesToolStripMenuItem";
             this.collegesToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.collegesToolStripMenuItem.Text = "View";
             this.collegesToolStripMenuItem.Click += new System.EventHandler(this.collegesToolStripMenuItem_Click);
+            this.collegesToolStripMenuItem.MouseLeave += new System.EventHandler(this.collegesToolStripMenuItem_MouseLeave);
+            this.collegesToolStripMenuItem.MouseHover += new System.EventHandler(this.collegesToolStripMenuItem_MouseHover);
             // 
             // studentsToolStripMenuItem
             // 
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.studentsToolStripMenuItem.Text = "Students";
             this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
             // 
             // classesToolStripMenuItem
             // 
+            this.classesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("classesToolStripMenuItem.Image")));
             this.classesToolStripMenuItem.Name = "classesToolStripMenuItem";
-            this.classesToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.classesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.classesToolStripMenuItem.Text = "Classes";
             this.classesToolStripMenuItem.Click += new System.EventHandler(this.classesToolStripMenuItem_Click);
             // 
             // schoolsToolStripMenuItem
             // 
+            this.schoolsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("schoolsToolStripMenuItem.Image")));
             this.schoolsToolStripMenuItem.Name = "schoolsToolStripMenuItem";
-            this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.schoolsToolStripMenuItem.Text = "Schools";
             this.schoolsToolStripMenuItem.Click += new System.EventHandler(this.schoolsToolStripMenuItem_Click);
             // 
             // collegesToolStripMenuItem1
             // 
             this.collegesToolStripMenuItem1.Name = "collegesToolStripMenuItem1";
-            this.collegesToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
+            this.collegesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.collegesToolStripMenuItem1.Text = "Colleges";
             this.collegesToolStripMenuItem1.Click += new System.EventHandler(this.collegesToolStripMenuItem1_Click);
             // 
             // usersToolStripMenuItem
             // 
+            this.usersToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usersToolStripMenuItem.Image")));
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usersToolStripMenuItem.Text = "Users";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
@@ -158,42 +169,46 @@
             this.schoolsToolStripMenuItem1,
             this.collegesToolStripMenuItem2,
             this.usersToolStripMenuItem1});
+            this.addToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            this.addToolStripMenuItem.MouseLeave += new System.EventHandler(this.addToolStripMenuItem_MouseLeave);
+            this.addToolStripMenuItem.MouseHover += new System.EventHandler(this.addToolStripMenuItem_MouseHover);
             // 
             // studentsToolStripMenuItem1
             // 
             this.studentsToolStripMenuItem1.Name = "studentsToolStripMenuItem1";
-            this.studentsToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
+            this.studentsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.studentsToolStripMenuItem1.Text = "Students";
             this.studentsToolStripMenuItem1.Click += new System.EventHandler(this.studentsToolStripMenuItem1_Click);
             // 
             // classesToolStripMenuItem1
             // 
             this.classesToolStripMenuItem1.Name = "classesToolStripMenuItem1";
-            this.classesToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
+            this.classesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.classesToolStripMenuItem1.Text = "Classes";
             this.classesToolStripMenuItem1.Click += new System.EventHandler(this.classesToolStripMenuItem1_Click);
             // 
             // schoolsToolStripMenuItem1
             // 
             this.schoolsToolStripMenuItem1.Name = "schoolsToolStripMenuItem1";
-            this.schoolsToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
+            this.schoolsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.schoolsToolStripMenuItem1.Text = "Schools";
             this.schoolsToolStripMenuItem1.Click += new System.EventHandler(this.schoolsToolStripMenuItem1_Click);
             // 
             // collegesToolStripMenuItem2
             // 
             this.collegesToolStripMenuItem2.Name = "collegesToolStripMenuItem2";
-            this.collegesToolStripMenuItem2.Size = new System.Drawing.Size(120, 22);
+            this.collegesToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.collegesToolStripMenuItem2.Text = "Colleges";
             this.collegesToolStripMenuItem2.Click += new System.EventHandler(this.collegesToolStripMenuItem2_Click);
             // 
             // usersToolStripMenuItem1
             // 
             this.usersToolStripMenuItem1.Name = "usersToolStripMenuItem1";
-            this.usersToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
+            this.usersToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.usersToolStripMenuItem1.Text = "Users";
             this.usersToolStripMenuItem1.Click += new System.EventHandler(this.usersToolStripMenuItem1_Click);
             // 
@@ -201,41 +216,50 @@
             // 
             this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentsToolStripMenuItem2});
+            this.importToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
             this.importToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.importToolStripMenuItem.Text = "Import";
+            this.importToolStripMenuItem.MouseLeave += new System.EventHandler(this.importToolStripMenuItem_MouseLeave);
+            this.importToolStripMenuItem.MouseHover += new System.EventHandler(this.importToolStripMenuItem_MouseHover);
             // 
             // studentsToolStripMenuItem2
             // 
             this.studentsToolStripMenuItem2.Name = "studentsToolStripMenuItem2";
-            this.studentsToolStripMenuItem2.Size = new System.Drawing.Size(120, 22);
+            this.studentsToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.studentsToolStripMenuItem2.Text = "Students";
             // 
             // settingsToolStripMenuItem
             // 
+            this.settingsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.MouseLeave += new System.EventHandler(this.settingsToolStripMenuItem_MouseLeave);
+            this.settingsToolStripMenuItem.MouseHover += new System.EventHandler(this.settingsToolStripMenuItem_MouseHover);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem,
             this.quickHelpToolStripMenuItem});
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.MouseLeave += new System.EventHandler(this.helpToolStripMenuItem_MouseLeave);
+            this.helpToolStripMenuItem.MouseHover += new System.EventHandler(this.helpToolStripMenuItem_MouseHover);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // quickHelpToolStripMenuItem
             // 
             this.quickHelpToolStripMenuItem.Name = "quickHelpToolStripMenuItem";
-            this.quickHelpToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.quickHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quickHelpToolStripMenuItem.Text = "Quick Help";
             // 
             // panel1
