@@ -57,6 +57,7 @@
             this.collegeFilter = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataTable = new System.Windows.Forms.DataGridView();
+            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,7 +66,7 @@
             // 
             // mainMenu
             // 
-            this.mainMenu.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.mainMenu.BackColor = System.Drawing.SystemColors.ControlDark;
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userToolStripMenuItem,
             this.collegesToolStripMenuItem,
@@ -78,18 +79,20 @@
             this.mainMenu.Size = new System.Drawing.Size(744, 24);
             this.mainMenu.TabIndex = 0;
             this.mainMenu.Text = "Menu";
-            this.mainMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mainMenu_ItemClicked);
             // 
             // userToolStripMenuItem
             // 
             this.userToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.profileToolStripMenuItem,
             this.logoutToolStripMenuItem});
-            this.userToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.userToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
             this.userToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.userToolStripMenuItem.Text = "Main";
+            this.userToolStripMenuItem.DropDownClosed += new System.EventHandler(this.userToolStripMenuItem_DropDownClosed);
+            this.userToolStripMenuItem.DropDownOpening += new System.EventHandler(this.userToolStripMenuItem_DropDownOpening);
             this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
+            this.userToolStripMenuItem.MouseEnter += new System.EventHandler(this.profileToolStripMenuItem_MouseEnter);
             this.userToolStripMenuItem.MouseLeave += new System.EventHandler(this.userToolStripMenuItem_MouseLeave);
             this.userToolStripMenuItem.MouseHover += new System.EventHandler(this.userToolStripMenuItem_MouseHover);
             // 
@@ -99,6 +102,7 @@
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.profileToolStripMenuItem.Text = "Profile";
+            this.profileToolStripMenuItem.MouseEnter += new System.EventHandler(this.profileToolStripMenuItem_MouseEnter);
             // 
             // logoutToolStripMenuItem
             // 
@@ -115,10 +119,12 @@
             this.schoolsToolStripMenuItem,
             this.collegesToolStripMenuItem1,
             this.usersToolStripMenuItem});
-            this.collegesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.collegesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.collegesToolStripMenuItem.Name = "collegesToolStripMenuItem";
             this.collegesToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.collegesToolStripMenuItem.Text = "View";
+            this.collegesToolStripMenuItem.DropDownClosed += new System.EventHandler(this.collegesToolStripMenuItem_DropDownClosed);
+            this.collegesToolStripMenuItem.DropDownOpening += new System.EventHandler(this.collegesToolStripMenuItem_DropDownOpening);
             this.collegesToolStripMenuItem.Click += new System.EventHandler(this.collegesToolStripMenuItem_Click);
             this.collegesToolStripMenuItem.MouseLeave += new System.EventHandler(this.collegesToolStripMenuItem_MouseLeave);
             this.collegesToolStripMenuItem.MouseHover += new System.EventHandler(this.collegesToolStripMenuItem_MouseHover);
@@ -129,6 +135,7 @@
             this.studentsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.studentsToolStripMenuItem.Text = "Students";
             this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
+            this.studentsToolStripMenuItem.MouseEnter += new System.EventHandler(this.studentsStripMenuItem_MouseEnter);
             // 
             // classesToolStripMenuItem
             // 
@@ -169,11 +176,12 @@
             this.schoolsToolStripMenuItem1,
             this.collegesToolStripMenuItem2,
             this.usersToolStripMenuItem1});
-            this.addToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.addToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.addToolStripMenuItem.Text = "Add";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            this.addToolStripMenuItem.DropDownClosed += new System.EventHandler(this.addToolStripMenuItem_DropDownClosed);
+            this.addToolStripMenuItem.DropDownOpening += new System.EventHandler(this.addToolStripMenuItem_DropDownOpening);
             this.addToolStripMenuItem.MouseLeave += new System.EventHandler(this.addToolStripMenuItem_MouseLeave);
             this.addToolStripMenuItem.MouseHover += new System.EventHandler(this.addToolStripMenuItem_MouseHover);
             // 
@@ -183,6 +191,7 @@
             this.studentsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.studentsToolStripMenuItem1.Text = "Students";
             this.studentsToolStripMenuItem1.Click += new System.EventHandler(this.studentsToolStripMenuItem1_Click);
+            this.studentsToolStripMenuItem1.MouseEnter += new System.EventHandler(this.studentsStripMenuItem1_MouseEnter);
             // 
             // classesToolStripMenuItem1
             // 
@@ -216,10 +225,12 @@
             // 
             this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentsToolStripMenuItem2});
-            this.importToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.importToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
             this.importToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.importToolStripMenuItem.Text = "Import";
+            this.importToolStripMenuItem.DropDownClosed += new System.EventHandler(this.importToolStripMenuItem_DropDownClosed);
+            this.importToolStripMenuItem.DropDownOpening += new System.EventHandler(this.importToolStripMenuItem_DropDownOpening);
             this.importToolStripMenuItem.MouseLeave += new System.EventHandler(this.importToolStripMenuItem_MouseLeave);
             this.importToolStripMenuItem.MouseHover += new System.EventHandler(this.importToolStripMenuItem_MouseHover);
             // 
@@ -228,13 +239,18 @@
             this.studentsToolStripMenuItem2.Name = "studentsToolStripMenuItem2";
             this.studentsToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.studentsToolStripMenuItem2.Text = "Students";
+            this.studentsToolStripMenuItem2.MouseEnter += new System.EventHandler(this.studentStripMenuItem2_MouseEnter);
             // 
             // settingsToolStripMenuItem
             // 
-            this.settingsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.preferencesToolStripMenuItem});
+            this.settingsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.DropDownClosed += new System.EventHandler(this.settingsToolStripMenuItem_DropDownClosed);
+            this.settingsToolStripMenuItem.DropDownOpening += new System.EventHandler(this.settingsToolStripMenuItem_DropDownOpening);
             this.settingsToolStripMenuItem.MouseLeave += new System.EventHandler(this.settingsToolStripMenuItem_MouseLeave);
             this.settingsToolStripMenuItem.MouseHover += new System.EventHandler(this.settingsToolStripMenuItem_MouseHover);
             // 
@@ -243,21 +259,26 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem,
             this.quickHelpToolStripMenuItem});
-            this.helpToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.DropDownClosed += new System.EventHandler(this.helpToolStripMenuItem_DropDownClosed);
+            this.helpToolStripMenuItem.DropDownOpening += new System.EventHandler(this.helpToolStripMenuItem_DropDownOpening);
             this.helpToolStripMenuItem.MouseLeave += new System.EventHandler(this.helpToolStripMenuItem_MouseLeave);
             this.helpToolStripMenuItem.MouseHover += new System.EventHandler(this.helpToolStripMenuItem_MouseHover);
             // 
             // aboutToolStripMenuItem
             // 
+            this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.MouseEnter += new System.EventHandler(this.aboutToolStripMenuItem_MouseEnter);
             // 
             // quickHelpToolStripMenuItem
             // 
+            this.quickHelpToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quickHelpToolStripMenuItem.Image")));
             this.quickHelpToolStripMenuItem.Name = "quickHelpToolStripMenuItem";
             this.quickHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quickHelpToolStripMenuItem.Text = "Quick Help";
@@ -324,6 +345,13 @@
             this.dataTable.Size = new System.Drawing.Size(538, 430);
             this.dataTable.TabIndex = 2;
             // 
+            // preferencesToolStripMenuItem
+            // 
+            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
+            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.preferencesToolStripMenuItem.Text = "Preferences";
+            this.preferencesToolStripMenuItem.MouseEnter += new System.EventHandler(this.preferencesToolStripMenuItem_MouseEnter);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,5 +407,6 @@
         private System.Windows.Forms.ComboBox collegeFilter;
         private System.Windows.Forms.ComboBox classFilter;
         private System.Windows.Forms.ComboBox schoolFilter;
+        private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
     }
 }

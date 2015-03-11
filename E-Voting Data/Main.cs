@@ -75,9 +75,9 @@ namespace E_Voting_Data
         {
             addToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
         }
-
         private void importToolStripMenuItem_MouseHover(object sender, EventArgs e)
         {
+           
             importToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
         }
 
@@ -120,6 +120,98 @@ namespace E_Voting_Data
         {
             helpToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#ffffff");
         }
+
+        private void userToolStripMenuItem_DropDownOpening(Object sender, EventArgs e) 
+        {
+            userToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void profileToolStripMenuItem_MouseEnter(Object sender, EventArgs e) 
+        {
+            userToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void userToolStripMenuItem_DropDownClosed(Object sender, EventArgs e)
+        {
+            userToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#ffffff");
+        }
+
+        private void collegesToolStripMenuItem_DropDownOpening(Object sender, EventArgs e)
+        {
+            collegesToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void studentsStripMenuItem_MouseEnter(Object sender, EventArgs e)
+        {
+            collegesToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void collegesToolStripMenuItem_DropDownClosed(Object sender, EventArgs e)
+        {
+            collegesToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#ffffff");
+        }
+
+        private void addToolStripMenuItem_DropDownOpening(Object sender, EventArgs e)
+        {
+            addToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void studentsStripMenuItem1_MouseEnter(Object sender, EventArgs e)
+        {
+            addToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void addToolStripMenuItem_DropDownClosed(Object sender, EventArgs e)
+        {
+            addToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#ffffff");
+        }
+
+        private void importToolStripMenuItem_DropDownOpening(Object sender, EventArgs e)
+        {
+            importToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void studentStripMenuItem2_MouseEnter(Object sender, EventArgs e)
+        {
+            importToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void importToolStripMenuItem_DropDownClosed(Object sender, EventArgs e)
+        {
+            importToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#ffffff");
+        }
+
+        private void settingsToolStripMenuItem_DropDownOpening(Object sender, EventArgs e)
+        {
+            settingsToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void preferencesToolStripMenuItem_MouseEnter(Object sender, EventArgs e)
+        {
+            settingsToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void settingsToolStripMenuItem_DropDownClosed(Object sender, EventArgs e)
+        {
+            settingsToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#ffffff");
+        }
+
+        private void helpToolStripMenuItem_DropDownOpening(Object sender, EventArgs e)
+        {
+            helpToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void aboutToolStripMenuItem_MouseEnter(Object sender, EventArgs e)
+        {
+            helpToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void helpToolStripMenuItem_DropDownClosed(Object sender, EventArgs e)
+        {
+            helpToolStripMenuItem.ForeColor = System.Drawing.ColorTranslator.FromHtml("#ffffff");
+        }
+
+
         private void Main_Load(object sender, EventArgs e)
         {
             if (Login.status == 0)
@@ -139,7 +231,6 @@ namespace E_Voting_Data
         {
 
         }
-
         private void collegesToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             AddCollege addcollege = new AddCollege();
@@ -276,14 +367,6 @@ namespace E_Voting_Data
             }
         }
 
-        private void mainMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void addToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
