@@ -367,6 +367,13 @@ namespace E_Voting_Data
             }
         }
 
+        private void studentsToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            AddExcellFiles addexcellfiles = new AddExcellFiles();
+
+            addexcellfiles.Show();
+        }
+
         
     }
 }

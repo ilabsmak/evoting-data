@@ -48,6 +48,7 @@
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentsToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quickHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +58,6 @@
             this.collegeFilter = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataTable = new System.Windows.Forms.DataGridView();
-            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -100,7 +100,7 @@
             // 
             this.profileToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("profileToolStripMenuItem.Image")));
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.profileToolStripMenuItem.Text = "Profile";
             this.profileToolStripMenuItem.MouseEnter += new System.EventHandler(this.profileToolStripMenuItem_MouseEnter);
             // 
@@ -108,7 +108,7 @@
             // 
             this.logoutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logoutToolStripMenuItem.Image")));
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             // 
             // collegesToolStripMenuItem
@@ -132,7 +132,7 @@
             // studentsToolStripMenuItem
             // 
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.studentsToolStripMenuItem.Text = "Students";
             this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
             this.studentsToolStripMenuItem.MouseEnter += new System.EventHandler(this.studentsStripMenuItem_MouseEnter);
@@ -141,7 +141,7 @@
             // 
             this.classesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("classesToolStripMenuItem.Image")));
             this.classesToolStripMenuItem.Name = "classesToolStripMenuItem";
-            this.classesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.classesToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.classesToolStripMenuItem.Text = "Classes";
             this.classesToolStripMenuItem.Click += new System.EventHandler(this.classesToolStripMenuItem_Click);
             // 
@@ -149,14 +149,14 @@
             // 
             this.schoolsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("schoolsToolStripMenuItem.Image")));
             this.schoolsToolStripMenuItem.Name = "schoolsToolStripMenuItem";
-            this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.schoolsToolStripMenuItem.Text = "Schools";
             this.schoolsToolStripMenuItem.Click += new System.EventHandler(this.schoolsToolStripMenuItem_Click);
             // 
             // collegesToolStripMenuItem1
             // 
             this.collegesToolStripMenuItem1.Name = "collegesToolStripMenuItem1";
-            this.collegesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.collegesToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.collegesToolStripMenuItem1.Text = "Colleges";
             this.collegesToolStripMenuItem1.Click += new System.EventHandler(this.collegesToolStripMenuItem1_Click);
             // 
@@ -164,7 +164,7 @@
             // 
             this.usersToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("usersToolStripMenuItem.Image")));
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.usersToolStripMenuItem.Text = "Users";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
@@ -188,7 +188,7 @@
             // studentsToolStripMenuItem1
             // 
             this.studentsToolStripMenuItem1.Name = "studentsToolStripMenuItem1";
-            this.studentsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.studentsToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.studentsToolStripMenuItem1.Text = "Students";
             this.studentsToolStripMenuItem1.Click += new System.EventHandler(this.studentsToolStripMenuItem1_Click);
             this.studentsToolStripMenuItem1.MouseEnter += new System.EventHandler(this.studentsStripMenuItem1_MouseEnter);
@@ -196,28 +196,28 @@
             // classesToolStripMenuItem1
             // 
             this.classesToolStripMenuItem1.Name = "classesToolStripMenuItem1";
-            this.classesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.classesToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.classesToolStripMenuItem1.Text = "Classes";
             this.classesToolStripMenuItem1.Click += new System.EventHandler(this.classesToolStripMenuItem1_Click);
             // 
             // schoolsToolStripMenuItem1
             // 
             this.schoolsToolStripMenuItem1.Name = "schoolsToolStripMenuItem1";
-            this.schoolsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.schoolsToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.schoolsToolStripMenuItem1.Text = "Schools";
             this.schoolsToolStripMenuItem1.Click += new System.EventHandler(this.schoolsToolStripMenuItem1_Click);
             // 
             // collegesToolStripMenuItem2
             // 
             this.collegesToolStripMenuItem2.Name = "collegesToolStripMenuItem2";
-            this.collegesToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.collegesToolStripMenuItem2.Size = new System.Drawing.Size(120, 22);
             this.collegesToolStripMenuItem2.Text = "Colleges";
             this.collegesToolStripMenuItem2.Click += new System.EventHandler(this.collegesToolStripMenuItem2_Click);
             // 
             // usersToolStripMenuItem1
             // 
             this.usersToolStripMenuItem1.Name = "usersToolStripMenuItem1";
-            this.usersToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.usersToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.usersToolStripMenuItem1.Text = "Users";
             this.usersToolStripMenuItem1.Click += new System.EventHandler(this.usersToolStripMenuItem1_Click);
             // 
@@ -239,6 +239,7 @@
             this.studentsToolStripMenuItem2.Name = "studentsToolStripMenuItem2";
             this.studentsToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.studentsToolStripMenuItem2.Text = "Students";
+            this.studentsToolStripMenuItem2.Click += new System.EventHandler(this.studentsToolStripMenuItem2_Click);
             this.studentsToolStripMenuItem2.MouseEnter += new System.EventHandler(this.studentStripMenuItem2_MouseEnter);
             // 
             // settingsToolStripMenuItem
@@ -253,6 +254,13 @@
             this.settingsToolStripMenuItem.DropDownOpening += new System.EventHandler(this.settingsToolStripMenuItem_DropDownOpening);
             this.settingsToolStripMenuItem.MouseLeave += new System.EventHandler(this.settingsToolStripMenuItem_MouseLeave);
             this.settingsToolStripMenuItem.MouseHover += new System.EventHandler(this.settingsToolStripMenuItem_MouseHover);
+            // 
+            // preferencesToolStripMenuItem
+            // 
+            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
+            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.preferencesToolStripMenuItem.Text = "Preferences";
+            this.preferencesToolStripMenuItem.MouseEnter += new System.EventHandler(this.preferencesToolStripMenuItem_MouseEnter);
             // 
             // helpToolStripMenuItem
             // 
@@ -272,7 +280,7 @@
             // 
             this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.MouseEnter += new System.EventHandler(this.aboutToolStripMenuItem_MouseEnter);
             // 
@@ -280,7 +288,7 @@
             // 
             this.quickHelpToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quickHelpToolStripMenuItem.Image")));
             this.quickHelpToolStripMenuItem.Name = "quickHelpToolStripMenuItem";
-            this.quickHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quickHelpToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.quickHelpToolStripMenuItem.Text = "Quick Help";
             // 
             // panel1
@@ -344,13 +352,6 @@
             this.dataTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataTable.Size = new System.Drawing.Size(538, 430);
             this.dataTable.TabIndex = 2;
-            // 
-            // preferencesToolStripMenuItem
-            // 
-            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
-            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.preferencesToolStripMenuItem.Text = "Preferences";
-            this.preferencesToolStripMenuItem.MouseEnter += new System.EventHandler(this.preferencesToolStripMenuItem_MouseEnter);
             // 
             // Main
             // 
