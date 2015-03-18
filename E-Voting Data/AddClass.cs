@@ -79,5 +79,22 @@ namespace E_Voting_Data
         {
 
         }
+
+        private void AddClass_Load(object sender, EventArgs e)
+        {
+            this.panel1.BackColor = System.Drawing.ColorTranslator.FromHtml("#266050");
+            this.panel2.BackColor = System.Drawing.ColorTranslator.FromHtml("#266050");
+            this.panel3.BackColor = System.Drawing.ColorTranslator.FromHtml("#266050");
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtcode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
