@@ -20,7 +20,7 @@ namespace E_Voting_Data
             MySqlDataAdapter collegeAdapter = new MySqlDataAdapter();
             //doQuery.connect();
             collegeAdapter = doQuery.get_colleges();
-
+            
             DataSet collegeData = new DataSet();
             collegeAdapter.Fill(collegeData);
             dataTable.DataSource = collegeData.Tables[0];

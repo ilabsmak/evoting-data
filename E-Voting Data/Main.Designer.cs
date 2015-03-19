@@ -87,8 +87,8 @@
             this.logoutToolStripMenuItem});
             this.userToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.userToolStripMenuItem.Text = "Main";
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.userToolStripMenuItem.Text = "Account";
             this.userToolStripMenuItem.DropDownClosed += new System.EventHandler(this.userToolStripMenuItem_DropDownClosed);
             this.userToolStripMenuItem.DropDownOpening += new System.EventHandler(this.userToolStripMenuItem_DropDownOpening);
             this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
@@ -237,7 +237,7 @@
             // studentsToolStripMenuItem2
             // 
             this.studentsToolStripMenuItem2.Name = "studentsToolStripMenuItem2";
-            this.studentsToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.studentsToolStripMenuItem2.Size = new System.Drawing.Size(120, 22);
             this.studentsToolStripMenuItem2.Text = "Students";
             this.studentsToolStripMenuItem2.Click += new System.EventHandler(this.studentsToolStripMenuItem2_Click);
             this.studentsToolStripMenuItem2.MouseEnter += new System.EventHandler(this.studentStripMenuItem2_MouseEnter);
@@ -293,6 +293,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.classFilter);
             this.panel1.Controls.Add(this.schoolFilter);
             this.panel1.Controls.Add(this.collegeFilter);
@@ -357,6 +358,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(744, 454);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
