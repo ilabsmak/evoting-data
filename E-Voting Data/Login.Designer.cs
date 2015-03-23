@@ -36,14 +36,16 @@
             this.passwordText = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.usernameText = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.loginBtn);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.panel3);
@@ -57,15 +59,20 @@
             // 
             // loginBtn
             // 
+            this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.loginBtn.FlatAppearance.BorderSize = 0;
+            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
-            this.loginBtn.Location = new System.Drawing.Point(87, 254);
+            this.loginBtn.Location = new System.Drawing.Point(-1, 0);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(245, 31);
             this.loginBtn.TabIndex = 9;
             this.loginBtn.Text = "LOGIN";
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click_1);
+            this.loginBtn.MouseLeave += new System.EventHandler(this.loginBtn_MouseLeave);
+            this.loginBtn.MouseHover += new System.EventHandler(this.loginBtn_MouseHover);
             // 
             // textBox2
             // 
@@ -128,6 +135,16 @@
             this.usernameText.Size = new System.Drawing.Size(240, 23);
             this.usernameText.TabIndex = 1;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Maroon;
+            this.panel4.Controls.Add(this.loginBtn);
+            this.panel4.Location = new System.Drawing.Point(82, 277);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(244, 30);
+            this.panel4.TabIndex = 10;
+            this.panel4.MouseHover += new System.EventHandler(this.panel4_MouseHover);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,6 +163,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -153,13 +171,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox passwordText;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox usernameText;
+        private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.Panel panel4;
 
 
     }

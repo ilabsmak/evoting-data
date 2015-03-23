@@ -67,6 +67,25 @@ namespace E_Voting_Data
             this.panel3.BackColor = System.Drawing.ColorTranslator.FromHtml("#266050");
             //this.panel3.BackColor = System.Drawing.ColorTranslator.FromHtml("#d3d3d3");
            // this.panel4.BackColor = System.Drawing.ColorTranslator.FromHtml("#d3d3d3");
+            this.panel4.BackColor = System.Drawing.ColorTranslator.FromHtml("#266050");
+            this.loginBtn.BackColor = System.Drawing.ColorTranslator.FromHtml("#266050");
+        }
+
+        private void panel4_MouseHover(object sender, EventArgs e)
+        {
+            panel4.BackColor = System.Drawing.ColorTranslator.FromHtml("#10bd8f");
+        }
+
+        private void loginBtn_MouseHover(object sender, EventArgs e)
+        {
+            loginBtn.BackColor = System.Drawing.ColorTranslator.FromHtml("#10bd8f");
+            loginBtn.ForeColor = System.Drawing.ColorTranslator.FromHtml("#000000");
+        }
+
+        private void loginBtn_MouseLeave(object sender, EventArgs e)
+        {
+            loginBtn.BackColor = System.Drawing.ColorTranslator.FromHtml("#266050");
+            loginBtn.ForeColor = System.Drawing.ColorTranslator.FromHtml("#ffffff");
         }
 
         private void usernameText_TextChanged(object sender, EventArgs e)
