@@ -13,8 +13,12 @@ namespace E_Voting_Data
 {
     public partial class Main : Form
     {
+        public static TreeNode collegenode;
+        public static TreeNode schoolnode;
+
         public Main()
         {
+           
             InitializeComponent();
             Database doQuery = new Database();
             MySqlDataAdapter collegeAdapter = new MySqlDataAdapter();
@@ -220,6 +224,70 @@ namespace E_Voting_Data
                 login.Show();
                 this.Hide();
             }
+            MySqlConnection MyConn2 = new MySqlConnection("datasource=10.10.10.10;Database=sample;username=sample;password=ilabsx");
+            
+            treeView1.Nodes.Clear();
+            string Query = "select * from colleges ;";
+
+            // MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+
+            MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+            try
+            {
+                //MySqlDataReader dr = MyCommand2.ExecuteReader();
+                MySqlDataAdapter da = new MySqlDataAdapter(MyCommand2);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    collegenode = new TreeNode(dr["name"].ToString());
+
+                    string schoolsQuery = "select * from schools WHERE college=" + dr["id"] + ";";
+                    MySqlCommand MyCommand3 = new MySqlCommand(schoolsQuery, MyConn2);
+                    try
+                    {
+                        //MySqlDataReader dr = MyCommand2.ExecuteReader();
+                        MySqlDataAdapter schoolsda = new MySqlDataAdapter(MyCommand3);
+                        DataTable schoolsdt = new DataTable();
+                        schoolsda.Fill(schoolsdt);
+                        foreach (DataRow schoolsdr in schoolsdt.Rows)
+                        {
+                            
+
+                            schoolnode = collegenode.Nodes.Add(schoolsdr["name"].ToString());
+                            string classQuery = "select * from classes WHERE school=" + schoolsdr["id"] + ";";
+                            MySqlCommand MyCommand4 = new MySqlCommand(classQuery, MyConn2);
+                            try
+                            {
+                                //MySqlDataReader dr = MyCommand2.ExecuteReader();
+                                MySqlDataAdapter classda = new MySqlDataAdapter(MyCommand4);
+                                DataTable classdt = new DataTable();
+                                classda.Fill(classdt);
+                                foreach (DataRow classdr in classdt.Rows)
+                                {
+                                    schoolnode.Nodes.Add(classdr["name"].ToString());
+                                }
+                            }
+                            catch (MySqlException ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                    }
+                    catch (MySqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    //node.Nodes.Add(dr["dob"].ToString());
+                    treeView1.Nodes.Add(collegenode);
+                    treeView1.MouseClick += new MouseEventHandler(treeView1_MouseClick);
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void userToolStripMenuItem_Click(object sender, EventArgs e)
@@ -372,6 +440,31 @@ namespace E_Voting_Data
             AddExcellFiles addexcellfiles = new AddExcellFiles();
 
             addexcellfiles.Show();
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+           // if (treeView1.SelectedNode == collegenode)
+            //{
+               // MessageBox.Show("yess");
+           // }
+        }
+
+        private void treeView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (treeView1.SelectedNode == schoolnode)
+            {
+               /* Database doQuery = new Database();
+                MySqlDataAdapter collegeAdapter = new MySqlDataAdapter();
+                //doQuery.connect();
+                collegeAdapter = doQuery.get_colleges();
+
+                DataSet collegeTable = new DataSet();
+                collegeAdapter.Fill(collegeTable);
+                dataTable.DataSource = collegeTable.Tables[0];*/
+                MessageBox.Show("yess");
+            }
+           // TreeNode clickedNode = e.;
         }
 
         
