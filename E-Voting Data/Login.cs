@@ -69,6 +69,8 @@ namespace E_Voting_Data
            // this.panel4.BackColor = System.Drawing.ColorTranslator.FromHtml("#d3d3d3");
             this.panel4.BackColor = System.Drawing.ColorTranslator.FromHtml("#266050");
             this.loginBtn.BackColor = System.Drawing.ColorTranslator.FromHtml("#266050");
+            this.panel1.BackColor = System.Drawing.ColorTranslator.FromHtml("#4a4a4a");
+            this.panel5.BackColor = System.Drawing.ColorTranslator.FromHtml("#ffffff");
         }
 
         private void panel4_MouseHover(object sender, EventArgs e)
