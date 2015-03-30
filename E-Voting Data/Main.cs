@@ -32,11 +32,7 @@ namespace E_Voting_Data
             DataTable collegeTable = new DataTable();
             collegeAdapter.Fill(collegeTable);
 
-            foreach (DataRow row in collegeTable.Rows)
-            {
-                collegeFilter.Items.Add(new ComboboxValue(Int32.Parse(row[0].ToString()), row[1].ToString()));
-
-            }
+           
 
             mainMenu.Renderer = new MyRenderer();
             mainMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#266050");
@@ -389,51 +385,9 @@ namespace E_Voting_Data
             dataTable.DataSource = collegeTable.Tables[0];
         }
 
-        private void collegeFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int college = (collegeFilter.SelectedIndex + 1);
-            Database doQuery = new Database();
-            MySqlDataAdapter schoolAdapter = new MySqlDataAdapter();
-            //doQuery.connect();
-            schoolAdapter = doQuery.get_schools(college);
+      
 
-            DataSet schoolData = new DataSet();
-            schoolAdapter.Fill(schoolData);
-            dataTable.DataSource = schoolData.Tables[0];
-
-            DataTable schoolTable = new DataTable();
-            schoolAdapter.Fill(schoolTable);
-
-            schoolFilter.Items.Clear();
-
-            foreach (DataRow row in schoolTable.Rows)
-            {
-                schoolFilter.Items.Add(new ComboboxValue(Int32.Parse(row[0].ToString()), row[1].ToString()));
-            }
-        }
-
-        private void schoolFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int school = (schoolFilter.SelectedIndex + 1);
-            Database doQuery = new Database();
-            MySqlDataAdapter classAdapter = new MySqlDataAdapter();
-            //doQuery.connect();
-            classAdapter = doQuery.get_classes(school);
-
-            DataSet classData = new DataSet();
-            classAdapter.Fill(classData);
-            dataTable.DataSource = classData.Tables[0];
-
-            DataTable classTable = new DataTable();
-            classAdapter.Fill(classTable);
-
-            classFilter.Items.Clear();
-
-            foreach (DataRow row in classTable.Rows)
-            {
-                classFilter.Items.Add(new ComboboxValue(Int32.Parse(row[0].ToString()), row[1].ToString()));
-            }
-        }
+       
 
         private void studentsToolStripMenuItem2_Click(object sender, EventArgs e)
         {

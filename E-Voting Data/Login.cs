@@ -100,7 +100,9 @@ namespace E_Voting_Data
             ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Green, ButtonBorderStyle.Solid);
         }
 
-        private void loginBtn_Click_1(object sender, EventArgs e)
+       
+
+        private void loginBtn_Click_2(object sender, EventArgs e)
         {
             try
             {

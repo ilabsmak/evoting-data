@@ -54,9 +54,6 @@
             this.quickHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataTable = new System.Windows.Forms.DataGridView();
-            this.collegeFilter = new System.Windows.Forms.ComboBox();
-            this.schoolFilter = new System.Windows.Forms.ComboBox();
-            this.classFilter = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.mainMenu.SuspendLayout();
@@ -314,42 +311,10 @@
             this.dataTable.Size = new System.Drawing.Size(538, 430);
             this.dataTable.TabIndex = 2;
             // 
-            // collegeFilter
-            // 
-            this.collegeFilter.FormattingEnabled = true;
-            this.collegeFilter.Location = new System.Drawing.Point(34, 32);
-            this.collegeFilter.Name = "collegeFilter";
-            this.collegeFilter.Size = new System.Drawing.Size(121, 21);
-            this.collegeFilter.TabIndex = 0;
-            this.collegeFilter.Text = "Colleges";
-            this.collegeFilter.SelectedIndexChanged += new System.EventHandler(this.collegeFilter_SelectedIndexChanged);
-            // 
-            // schoolFilter
-            // 
-            this.schoolFilter.FormattingEnabled = true;
-            this.schoolFilter.Location = new System.Drawing.Point(34, 85);
-            this.schoolFilter.Name = "schoolFilter";
-            this.schoolFilter.Size = new System.Drawing.Size(121, 21);
-            this.schoolFilter.TabIndex = 1;
-            this.schoolFilter.Text = "Schools";
-            this.schoolFilter.SelectedIndexChanged += new System.EventHandler(this.schoolFilter_SelectedIndexChanged);
-            // 
-            // classFilter
-            // 
-            this.classFilter.FormattingEnabled = true;
-            this.classFilter.Location = new System.Drawing.Point(34, 144);
-            this.classFilter.Name = "classFilter";
-            this.classFilter.Size = new System.Drawing.Size(121, 21);
-            this.classFilter.TabIndex = 2;
-            this.classFilter.Text = "Classes";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.treeView1);
-            this.panel1.Controls.Add(this.classFilter);
-            this.panel1.Controls.Add(this.schoolFilter);
-            this.panel1.Controls.Add(this.collegeFilter);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
@@ -358,9 +323,9 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 171);
+            this.treeView1.Location = new System.Drawing.Point(12, 13);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(188, 215);
+            this.treeView1.Size = new System.Drawing.Size(188, 393);
             this.treeView1.TabIndex = 3;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             this.treeView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treeView1_MouseClick);
@@ -418,9 +383,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataTable;
         private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
-        private System.Windows.Forms.ComboBox collegeFilter;
-        private System.Windows.Forms.ComboBox schoolFilter;
-        private System.Windows.Forms.ComboBox classFilter;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TreeView treeView1;
     }
