@@ -398,27 +398,51 @@ namespace E_Voting_Data
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-           // if (treeView1.SelectedNode == collegenode)
-            //{
-               // MessageBox.Show("yess");
-           // }
+            if (treeView1.SelectedNode.Level == 1)
+            {
+                //int college = (collegeFilter.SelectedIndex + 1);
+                //MessageBox.Show(treeView1.SelectedNode.FullPath.ToString());
+                Database doQuery = new Database();
+                MySqlDataAdapter studentAdapter = new MySqlDataAdapter();
+                //doQuery.connect();
+                studentAdapter = doQuery.get_classes();
+
+                DataSet fnameTable = new DataSet();
+                studentAdapter.Fill(fnameTable);
+
+                dataTable.DataSource = fnameTable.Tables[0];
+            }
+            else if (treeView1.SelectedNode.Level == 2)
+            {
+                //MessageBox.Show(treeView1.SelectedNode.FullPath.ToString());
+                Database doQuery = new Database();
+                MySqlDataAdapter studentAdapter = new MySqlDataAdapter();
+                //doQuery.connect();
+                studentAdapter = doQuery.get_classes();
+
+                DataSet fnameTable = new DataSet();
+                studentAdapter.Fill(fnameTable);
+
+                dataTable.DataSource = fnameTable.Tables[0];
+            }
         }
 
         private void treeView1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (treeView1.SelectedNode == schoolnode)
-            {
-               /* Database doQuery = new Database();
-                MySqlDataAdapter collegeAdapter = new MySqlDataAdapter();
-                //doQuery.connect();
-                collegeAdapter = doQuery.get_colleges();
 
-                DataSet collegeTable = new DataSet();
-                collegeAdapter.Fill(collegeTable);
-                dataTable.DataSource = collegeTable.Tables[0];*/
-                MessageBox.Show("yess");
-            }
-           // TreeNode clickedNode = e.;
+            /*if (treeView1.SelectedNode.Level == 2)
+            {
+                //MessageBox.Show(treeView1.SelectedNode.FullPath.ToString());
+                Database doQuery = new Database();
+                MySqlDataAdapter studentAdapter = new MySqlDataAdapter();
+                //doQuery.connect();
+                studentAdapter = doQuery.get_classes();
+
+                DataSet fnameTable = new DataSet();
+                studentAdapter.Fill(fnameTable);
+
+                dataTable.DataSource = fnameTable.Tables[0];
+            }*/
         }
 
         
