@@ -414,16 +414,18 @@ namespace E_Voting_Data
             }
             else if (treeView1.SelectedNode.Level == 2)
             {
-                //MessageBox.Show(treeView1.SelectedNode.FullPath.ToString());
                 Database doQuery = new Database();
-                MySqlDataAdapter studentAdapter = new MySqlDataAdapter();
+                MySqlDataAdapter classAdapter = new MySqlDataAdapter();
                 //doQuery.connect();
-                studentAdapter = doQuery.get_classes();
+                classAdapter = doQuery.get_classes();
 
-                DataSet fnameTable = new DataSet();
-                studentAdapter.Fill(fnameTable);
+                DataSet classData = new DataSet();
+                classAdapter.Fill(classData);
+                dataTable.DataSource = classData.Tables[0];
 
-                dataTable.DataSource = fnameTable.Tables[0];
+                DataTable classTable = new DataTable();
+                classAdapter.Fill(classTable);
+                dataTable.DataSource = classTable.Rows[0];
             }
         }
 

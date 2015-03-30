@@ -11,9 +11,11 @@ using MySql.Data.MySqlClient;
 
 namespace E_Voting_Data
 {
+   
     public partial class AddExcellFiles : Form
     {
-
+        public static string connectionString = "datasource=10.10.10.10;database=sample;port=3306; username=sample;password=ilabsx";
+         MySqlConnection connection = new MySqlConnection(connectionString);
         MySqlCommand sCommand;
         MySqlDataAdapter sAdapter;
         MySqlCommandBuilder sBuilder;
@@ -35,9 +37,9 @@ namespace E_Voting_Data
         private void button3_Click_1(object sender, EventArgs e)
         {
 
-            string connectionString = "datasource=10.10.10.10;database=sample;port=3306; username=sample;password=ilabsx";
+            //string connectionString = "datasource=10.10.10.10;database=sample;port=3306; username=sample;password=ilabsx";
             string sql = "SELECT * FROM students";
-            MySqlConnection connection = new MySqlConnection(connectionString);
+           
             connection.Open();
             sCommand = new MySqlCommand(sql, connection);
             sAdapter = new MySqlDataAdapter(sCommand);
@@ -79,51 +81,84 @@ namespace E_Voting_Data
             delete_btn.Enabled = true;
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
+        
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
+             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "PDF Files(*.pdf)|*.pdf|WORD Files(*.doc;*.docx)|*.doc;*.docx|EXCEL Files(*.xlsx;*.xlsm;*.xlsb;*.xltx;*.xltm;*.xls;*.xlt)|*.xlsx;*.xlsm;*.xlsb;*.xltx;*.xltm;*.xls;*.xlt|Image Files(*.jpg;*.gif;*.bmp;*.png;*.jpeg)|*.jpg;*.gif;*.bmp;*.png;*.jpeg|All Files|*.*";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 string path = ofd.FileName.ToString();
-                //System.IO.FileInfo fInfo = new System.IO.FileInfo(ofd.FileName);
+                try
+                {
 
-                // string strFileName = fInfo.Name;
-
-                // string path = fInfo.DirectoryName;
-                textBox1.Text = path;
-            }
-        
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                System.Data.OleDb.OleDbConnection MyConnection;
-                System.Data.DataSet DtSet;
-                System.Data.OleDb.OleDbDataAdapter MyCommand;
-                MyConnection = new System.Data.OleDb.OleDbConnection(@"provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + textBox1.Text + ";Extended Properties=Excel 8.0;");
-                MyCommand = new System.Data.OleDb.OleDbDataAdapter("select * from [Sheet1$]", MyConnection);
+                    System.Data.OleDb.OleDbConnection MyConnection;
+                    System.Data.DataSet DtSet;
+                    System.Data.OleDb.OleDbDataAdapter MyCommand;
+                    MyConnection = new System.Data.OleDb.OleDbConnection(@"provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + ";Extended Properties=Excel 8.0;");
+                    MyCommand = new System.Data.OleDb.OleDbDataAdapter("select * from [Sheet1$]", MyConnection);
 
 
 
-                MyCommand.TableMappings.Add("Table", "TestTable");
-                DtSet = new System.Data.DataSet();
-                MyCommand.Fill(DtSet);
-                dataGridView1.DataSource = DtSet.Tables[0];
-                MyConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            /* String constr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + textBox1 + ";Extended Properties='Excel 12.0 XML;HDR=YES;';";
+                    MyCommand.TableMappings.Add("Table", "TestTable");
+                    DtSet = new System.Data.DataSet();
+                    MyCommand.Fill(DtSet);
+                    dataGridView1.DataSource = DtSet.Tables[0];
+                    MyConnection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                /* String constr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + textBox1 + ";Extended Properties='Excel 12.0 XML;HDR=YES;';";
 
            
 
 
-            */
+                */
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+           
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                MySqlCommand command = new MySqlCommand();
+                
+
+                MySqlCommand command2 = new MySqlCommand();
+               
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.Connection = connection;
+                    connection.Open();
+                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    {
+                        Boolean Empty = true;
+                        for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                        {
+
+                            Empty = false;
+                            string StrQuery = @"INSERT  INTO students(Id,Name,Country) VALUES ('"
+                                    + dataGridView1.Rows[i].Cells["Id"].Value + "','"
+                                    + dataGridView1.Rows[i].Cells["Name"].Value + "','"
+                                    + dataGridView1.Rows[i].Cells["Country"].Value + "')";
+                            cmd.CommandText = StrQuery;
+                            cmd.ExecuteNonQuery();
+
+                        }
+                        if (Empty)
+                        {
+                            dataGridView1.Rows.RemoveAt(i);
+                            i--;
+                        }
+                    }
+                }
+                MessageBox.Show("Successfully Added!");
+            }
+
         }
     }
 }
