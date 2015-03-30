@@ -31,7 +31,8 @@ namespace E_Voting_Data
        
         private void AddExcellFiles_Load(object sender, EventArgs e)
         {
-
+           // FormBorderStyle = FormBorderStyle.None;
+            //WindowState = FormWindowState.Maximized;
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -105,6 +106,7 @@ namespace E_Voting_Data
                     DtSet = new System.Data.DataSet();
                     MyCommand.Fill(DtSet);
                     dataGridView1.DataSource = DtSet.Tables[0];
+
                     MyConnection.Close();
                 }
                 catch (Exception ex)
