@@ -66,6 +66,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(426, 332);
             this.panel5.TabIndex = 2;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel4
             // 
@@ -88,9 +89,8 @@
             this.loginBtn.Size = new System.Drawing.Size(245, 31);
             this.loginBtn.TabIndex = 9;
             this.loginBtn.Text = "LOGIN";
-            this.loginBtn.UseVisualStyleBackColor = true ;
+            this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click_2);
             // 
             // textBox2
             // 

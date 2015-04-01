@@ -97,48 +97,19 @@ namespace E_Voting_Data
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.Green, ButtonBorderStyle.Solid);
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.White, ButtonBorderStyle.Solid);
         }
 
        
 
         private void loginBtn_Click_2(object sender, EventArgs e)
         {
-            try
-            {
-                string myConnection = "datasource=10.10.10.10; port=3306; username=sample; password=ilabsx";
-                MySqlConnection myConn = new MySqlConnection(myConnection);
-                MySqlCommand SelectCommand = new MySqlCommand("select*from sample.users where username= '" + this.usernameText.Text + "'and password='" + this.passwordText.Text + "';", myConn);
-                MySqlDataReader myReader;
-                myConn.Open();
-                myReader = SelectCommand.ExecuteReader();
-                int count = 0;
-                while (myReader.Read())
-                {
-                    count = count + 1;
-                }
-                if (count == 1)
-                {
-                    //MessageBox.Show("your in");
-                    status = 1;
-                    Main maininstance = new Main();
-                    this.Hide();
-                    maininstance.Show();
 
-                }
-                else if (count < 1)
-                {
-                    MessageBox.Show(" dup username or password, access denied");
+        }
 
-                }
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
 
-                else MessageBox.Show("inxorrect usename and password");
-                myConn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
     }
 }
