@@ -89,7 +89,11 @@
             this.loginBtn.TabIndex = 9;
             this.loginBtn.Text = "LOGIN";
             this.loginBtn.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+=======
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click_2);
+>>>>>>> origin/master
             // 
             // textBox2
             // 
