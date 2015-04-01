@@ -88,12 +88,9 @@
             this.loginBtn.Size = new System.Drawing.Size(245, 31);
             this.loginBtn.TabIndex = 9;
             this.loginBtn.Text = "LOGIN";
-            this.loginBtn.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
+            this.loginBtn.UseVisualStyleBackColor = true ;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
-=======
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click_2);
->>>>>>> origin/master
             // 
             // textBox2
             // 
